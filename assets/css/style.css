@@ -1,0 +1,453 @@
+/* ==========================================================================
+   STYLE.CSS - Global Styles & Design System
+   Website: Creative Media Student Portfolio
+   Theme: Modern, Creative, Glassmorphism, Gradient (Blue & Yellow Palette)
+   ========================================================================== */
+
+/* --- 1. CSS VARIABLES (DESIGN TOKENS) --- */
+:root {
+  /* Color Palette - Blue (ฟ้า) & Yellow (เหลือง) */
+  --primary-blue: #0ea5e9;         /* Sky / Electric Blue */
+  --primary-blue-dark: #0284c7;
+  --primary-blue-light: #7dd3fc;
+  --primary-yellow: #facc15;       /* Cyber / Radiant Yellow */
+  --primary-yellow-dark: #eab308;
+  --primary-yellow-light: #fef08a;
+  --accent-cyan: #06b6d4;
+  --accent-amber: #f59e0b;
+
+  /* Gradient Combos */
+  --gradient-primary: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 50%, #facc15 100%);
+  --gradient-secondary: linear-gradient(135deg, #facc15 0%, #f59e0b 50%, #0ea5e9 100%);
+  --gradient-blue: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+  --gradient-yellow: linear-gradient(135deg, #f59e0b 0%, #facc15 100%);
+  --gradient-mesh: radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
+                    radial-gradient(at 100% 0%, rgba(250, 204, 21, 0.12) 0px, transparent 50%),
+                    radial-gradient(at 50% 100%, rgba(6, 182, 212, 0.1) 0px, transparent 50%);
+
+  /* Typography */
+  --font-heading: 'Kanit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Kanit', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* --- Dark Mode (Default) --- */
+[data-bs-theme="dark"],
+:root:not([data-bs-theme="light"]) {
+  --bg-body: #0b1120;
+  --bg-surface: #111a30;
+  --bg-surface-elevated: #1e293b;
+  --bg-glass: rgba(17, 26, 48, 0.7);
+  --bg-glass-strong: rgba(17, 26, 48, 0.85);
+  --border-glass: rgba(56, 189, 248, 0.16);
+  --border-glass-hover: rgba(250, 204, 21, 0.35);
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 35px -10px rgba(0, 0, 0, 0.5);
+  --shadow-glow-blue: 0 0 30px rgba(14, 165, 233, 0.25);
+  --shadow-glow-yellow: 0 0 30px rgba(250, 204, 21, 0.25);
+}
+
+/* --- Light Mode --- */
+[data-bs-theme="light"] {
+  --bg-body: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f1f5f9;
+  --bg-glass: rgba(255, 255, 255, 0.75);
+  --bg-glass-strong: rgba(255, 255, 255, 0.9);
+  --border-glass: rgba(14, 165, 233, 0.2);
+  --border-glass-hover: rgba(234, 179, 8, 0.45);
+  
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  
+  --shadow-sm: 0 4px 6px -1px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 20px 35px -10px rgba(15, 23, 42, 0.12);
+  --shadow-glow-blue: 0 0 25px rgba(14, 165, 233, 0.2);
+  --shadow-glow-yellow: 0 0 25px rgba(234, 179, 8, 0.2);
+}
+
+/* --- 2. GLOBAL RESET & BASE STYLES --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px; /* Offset for sticky header */
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  background-image: var(--gradient-mesh);
+  background-attachment: fixed;
+}
+
+/* Headings with Thai font support */
+h1, h2, h3, h4, h5, h6, .brand-font {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-body);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--primary-blue), var(--primary-yellow));
+  border-radius: 99px;
+  border: 2px solid var(--bg-body);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--primary-blue-dark), var(--primary-yellow-dark));
+}
+
+/* --- 3. GLASSMORPHISM CORE UTILITIES --- */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.glass-panel:hover {
+  border-color: var(--border-glass-hover);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-blue);
+}
+
+.glass-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  color: var(--primary-blue);
+  backdrop-filter: blur(8px);
+}
+
+.glass-badge-yellow {
+  background: rgba(250, 204, 21, 0.12);
+  border-color: rgba(250, 204, 21, 0.35);
+  color: var(--primary-yellow);
+}
+
+/* Gradient Text Effect */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gradient-yellow {
+  background: var(--gradient-yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Section Title Stylings */
+.section-header {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--primary-yellow);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-desc {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* Page Header for Multi-page layout */
+.page-header {
+  padding: 140px 0 50px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.page-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.1rem;
+  border-radius: 9999px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-glass);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.page-breadcrumb a {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.page-breadcrumb a:hover {
+  color: var(--primary-yellow);
+}
+
+.page-breadcrumb .breadcrumb-separator {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+}
+
+.page-breadcrumb span.current-page {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* --- 4. BUTTONS & INTERACTIVE ELEMENTS --- */
+.btn-modern {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.85rem 1.85rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  z-index: 1;
+}
+
+.btn-modern-primary {
+  background: var(--gradient-primary);
+  color: #0b1120;
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
+}
+
+.btn-modern-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(250, 204, 21, 0.45);
+  color: #0b1120;
+}
+
+.btn-modern-outline {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  color: var(--text-main);
+  border: 1.5px solid var(--border-glass);
+}
+
+.btn-modern-outline:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+/* Button Shimmer Animation */
+.btn-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transition: left 0.6s ease;
+  z-index: -1;
+}
+
+.btn-shimmer:hover::before {
+  left: 100%;
+}
+
+/* --- 5. PRELOADER ANIMATION --- */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: var(--bg-body);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner-wrap {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: var(--primary-blue);
+  border-bottom-color: var(--primary-yellow);
+  animation: spin 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+.spinner-logo {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--text-main);
+}
+
+.preloader-text {
+  margin-top: 1.2rem;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* --- 6. SCROLL TO TOP BUTTON --- */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--bg-glass-strong);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid var(--border-glass);
+  color: var(--primary-yellow);
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#scrollTopBtn:hover {
+  background: var(--primary-blue);
+  border-color: var(--primary-yellow);
+  color: #0b1120;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+/* --- 7. SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER) --- */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-init.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reveal Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Reduced Motion Preference Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

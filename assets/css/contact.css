@@ -1,0 +1,292 @@
+/* ==========================================================================
+   CONTACT.CSS - Contact Info, Social Channels, Form, and Footer
+   Website: Creative Media Student Portfolio
+   ========================================================================== */
+
+/* --- 1. CONTACT SECTION LAYOUT --- */
+.contact-section {
+  padding: 100px 0 60px;
+  position: relative;
+}
+
+/* Contact Info Side */
+.contact-info-card {
+  padding: 2.5rem;
+  height: 100%;
+}
+
+.contact-info-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.contact-info-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* Contact Detail Items */
+.contact-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-item-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.contact-item-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--primary-blue);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.contact-item-row:hover .contact-item-icon {
+  background: rgba(250, 204, 21, 0.2);
+  border-color: rgba(250, 204, 21, 0.5);
+  color: var(--primary-yellow);
+  transform: scale(1.08);
+}
+
+.contact-item-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  margin-bottom: 0.2rem;
+}
+
+.contact-item-val {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-item-val:hover {
+  color: var(--primary-yellow);
+}
+
+/* --- 2. SOCIAL MEDIA LINKS (5 REQUIRED: Email, Facebook, Instagram, GitHub, Behance) --- */
+.social-links-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.social-buttons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 12px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.social-btn i {
+  font-size: 1.15rem;
+  transition: transform var(--transition-fast);
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+}
+
+.social-btn:hover i {
+  transform: scale(1.15);
+}
+
+/* Specific Social Brand Colors on Hover */
+.social-btn-email:hover {
+  border-color: var(--primary-yellow);
+  color: var(--primary-yellow);
+  background: rgba(250, 204, 21, 0.1);
+}
+
+.social-btn-fb:hover {
+  border-color: #1877f2;
+  color: #1877f2;
+  background: rgba(24, 119, 242, 0.1);
+}
+
+.social-btn-ig:hover {
+  border-color: #e1306c;
+  color: #e1306c;
+  background: rgba(225, 48, 108, 0.1);
+}
+
+.social-btn-gh:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  background: rgba(14, 165, 233, 0.1);
+}
+
+.social-btn-be:hover {
+  border-color: #053eff;
+  color: #38bdf8;
+  background: rgba(5, 62, 255, 0.1);
+}
+
+/* --- 3. INTERACTIVE CONTACT FORM --- */
+.contact-form-card {
+  padding: 2.5rem;
+}
+
+.form-group-custom {
+  margin-bottom: 1.5rem;
+}
+
+.form-label-custom {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.form-control-custom {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  border-radius: 12px;
+  background: var(--bg-surface-elevated);
+  border: 1.5px solid var(--border-glass);
+  color: var(--text-main);
+  transition: all var(--transition-fast);
+}
+
+.form-control-custom:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  background: var(--bg-surface);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.25);
+  color: var(--text-main);
+}
+
+.form-control-custom::placeholder {
+  color: var(--text-dim);
+}
+
+textarea.form-control-custom {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* Feedback alert / status */
+.form-feedback {
+  display: none;
+  padding: 0.85rem 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.form-feedback.success {
+  display: block;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #22c55e;
+}
+
+.form-feedback.error {
+  display: block;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+}
+
+/* --- 4. FOOTER --- */
+.site-footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border-glass);
+  background: var(--bg-glass-strong);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin-top: 5rem;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.footer-designer {
+  color: var(--primary-yellow);
+  font-weight: 600;
+}
+
+.footer-back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.footer-back-to-top:hover {
+  color: var(--primary-yellow);
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  .contact-info-card,
+  .contact-form-card {
+    padding: 1.75rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

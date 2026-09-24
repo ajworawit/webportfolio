@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#facc15" />
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </radialGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0284c7" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background Circle with Glow -->
+  <circle cx="250" cy="250" r="230" fill="url(#bg-grad)" />
+  <circle cx="250" cy="220" r="210" fill="url(#glow)" />
+
+  <!-- Abstract Creative Media Orbit Rings -->
+  <circle cx="250" cy="250" r="200" fill="none" stroke="url(#accent-grad)" stroke-width="3" stroke-dasharray="12 10" opacity="0.6" />
+  <ellipse cx="250" cy="250" rx="220" ry="110" fill="none" stroke="#facc15" stroke-width="2" stroke-dasharray="8 14" opacity="0.5" transform="rotate(-25 250 250)" />
+  <ellipse cx="250" cy="250" rx="220" ry="110" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="10 12" opacity="0.5" transform="rotate(35 250 250)" />
+
+  <!-- Floating Sparkles / Creative Nodes -->
+  <circle cx="100" cy="140" r="8" fill="#facc15" filter="url(#soft-shadow)" />
+  <circle cx="410" cy="160" r="10" fill="#38bdf8" filter="url(#soft-shadow)" />
+  <circle cx="380" cy="380" r="7" fill="#fef08a" />
+  <circle cx="120" cy="360" r="9" fill="#0284c7" />
+
+  <!-- Avatar Character Silhouette (Creative Designer) -->
+  <!-- Shoulders & Torso -->
+  <path d="M 120 450 C 130 360, 200 330, 250 330 C 300 330, 370 360, 380 450 Z" fill="#0f172a" />
+  <!-- Jacket / Collar Details -->
+  <path d="M 160 450 C 180 375, 220 350, 250 350 C 280 350, 320 375, 340 450" fill="none" stroke="url(#accent-grad)" stroke-width="4" />
+  <path d="M 225 350 L 250 420 L 275 350" fill="none" stroke="#facc15" stroke-width="3" />
+
+  <!-- Neck -->
+  <rect x="226" y="270" width="48" height="65" rx="10" fill="#cbd5e1" opacity="0.9" />
+
+  <!-- Head Base -->
+  <ellipse cx="250" cy="225" rx="70" ry="85" fill="#e2e8f0" />
+  
+  <!-- Modern Hair Style -->
+  <path d="M 175 220 C 170 145, 230 115, 280 125 C 320 135, 335 170, 325 210 C 320 175, 290 155, 250 155 C 205 155, 185 185, 175 220 Z" fill="#1e293b" />
+  <path d="M 175 210 Q 165 240 160 260 Q 185 240 190 220 Z" fill="#1e293b" />
+
+  <!-- Creative Designer Glasses (Cyan & Gold Cyber Neon) -->
+  <rect x="195" y="200" width="45" height="28" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="3.5" />
+  <rect x="260" y="200" width="45" height="28" rx="8" fill="#0f172a" stroke="#facc15" stroke-width="3.5" />
+  <path d="M 240 214 L 260 214" stroke="#e2e8f0" stroke-width="3" />
+  <line x1="175" y1="210" x2="195" y2="210" stroke="#38bdf8" stroke-width="3" />
+  <line x1="305" y1="210" x2="325" y2="210" stroke="#facc15" stroke-width="3" />
+  <!-- Glasses Lens Reflection -->
+  <line x1="202" y1="205" x2="225" y2="220" stroke="#38bdf8" stroke-width="2" opacity="0.6" />
+  <line x1="267" y1="205" x2="290" y2="220" stroke="#facc15" stroke-width="2" opacity="0.6" />
+
+  <!-- Creative Headphones -->
+  <path d="M 165 220 A 85 85 0 0 1 335 220" fill="none" stroke="#0ea5e9" stroke-width="8" stroke-linecap="round" />
+  <rect x="155" y="205" width="20" height="46" rx="10" fill="#facc15" />
+  <rect x="325" y="205" width="20" height="46" rx="10" fill="#38bdf8" />
+
+  <!-- Confident Smile -->
+  <path d="M 235 260 Q 250 272 265 260" fill="none" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Creative Floating Badges -->
+  <g transform="translate(60, 260)" filter="url(#soft-shadow)">
+    <rect width="90" height="34" rx="17" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="45" y="22" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" text-anchor="middle">🎨 CREATIVE</text>
+  </g>
+  <g transform="translate(345, 275)" filter="url(#soft-shadow)">
+    <rect width="95" height="34" rx="17" fill="#0f172a" stroke="#facc15" stroke-width="1.5" />
+    <text x="47" y="22" fill="#facc15" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" text-anchor="middle">✨ 3D MOTION</text>
+  </g>
+</svg>

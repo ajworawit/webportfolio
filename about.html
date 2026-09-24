@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="th" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>ทักษะและความสามารถ (Skills) | วรวิทย์ สังฆทิพย์</title>
+  <meta name="description" content="ประวัติย่อ การศึกษา ความสนใจ และเป้าหมายในการทำงานของนักศึกษาสาขาสื่อนฤมิต (Creative Media)">
+  <meta name="author" content="Panuwat Narumitsin">
+
+  <!-- Favicon Icon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/profile-placeholder.svg">
+
+  <!-- Google Fonts: Kanit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Modular CSS Architecture -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader" aria-label="กำลังโหลดหน้าเว็บไซต์...">
+    <div class="spinner-wrap">
+      <div class="spinner-ring"></div>
+      <div class="spinner-logo"><span class="text-primary-blue">C</span><span class="text-warning">M</span></div>
+    </div>
+    <div class="preloader-text">ABOUT ME • CREATIVE MEDIA</div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar navbar-expand-lg custom-navbar" id="mainNavbar">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon">
+            <i class="fa-solid fa-shapes"></i>
+          </div>
+          <span class="brand-text">TUMSMILE<span class="brand-dot">.</span>PORTFOLIO</span>
+        </a>
+
+        <!-- Right Side: Theme Toggle & Mobile Hamburger -->
+        <div class="d-flex align-items-center gap-2 order-lg-last">
+          <button class="theme-toggle-btn" id="themeToggleBtn" type="button" title="สลับโหมดมืด / สว่าง" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon icon-moon"></i>
+            <i class="fa-solid fa-sun icon-sun"></i>
+          </button>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="เปิดเมนูนำทาง">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"><i class="fa-solid fa-house-chimney me-1 d-lg-none"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html"><i class="fa-solid fa-user-astronaut me-1 d-lg-none"></i> About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="skills.html"><i class="fa-solid fa-wand-magic-sparkles me-1 d-lg-none"></i> Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html"><i class="fa-solid fa-cubes me-1 d-lg-none"></i> Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"><i class="fa-solid fa-paper-plane me-1 d-lg-none"></i> Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page Header & Breadcrumb -->
+    <section class="page-header">
+      <div class="container reveal-init">
+        <div class="page-breadcrumb">
+          <a href="index.html"><i class="fa-solid fa-house me-1"></i> หน้าแรก</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="current-page">เกี่ยวกับผม (About Me)</span>
+        </div>
+        <h1 class="section-title">เกี่ยวกับ<span class="text-gradient">ตัวผม</span></h1>
+        <p class="section-desc">
+          ประวัติการศึกษา ความสนใจ และเป้าหมายของนักศึกษาสาขาสื่อนฤมิต ผู้พร้อมผสานศิลปะและเทคโนโลยี
+        </p>
+      </div>
+    </section>
+
+    <!-- Main About Content -->
+    <section class="about-section py-4" id="about">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          
+          <!-- Left Column: Story Bio & Stats -->
+          <div class="col-lg-6 reveal-init delay-100">
+            <div class="about-story-card glass-panel">
+              <div>
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="glass-badge">
+                    <i class="fa-solid fa-fingerprint"></i> My Story &amp; Passion
+                  </span>
+                </div>
+                <h2 class="h3 fw-bold mb-3">สร้างสรรค์ด้วยหัวใจ ขับเคลื่อนด้วยนวัตกรรมดิจิทัล</h2>
+                <p class="about-intro-text">
+                  สวัสดีครับ ผม <strong>ภานุวัฒน์ นฤมิตศิลป์</strong> นักศึกษาชั้นปีที่ 3 สาขา <span class="about-highlight">สื่อนฤมิต (Creative Media Technology)</span> ผมมีความหลงใหลอย่างลึกซึ้งในการเปลี่ยนจินตนาการทางความคิดสร้างสรรค์ให้กลายเป็นผลงานดิจิทัลที่สามารถสัมผัสและมีปฏิสัมพันธ์ได้จริง
+                </p>
+                <p class="about-sub-text">
+                  ตลอดระยะเวลาการศึกษา ผมได้ฝึกฝนทักษะการเล่าเรื่อง (Visual Storytelling) ผ่านภาพยนตร์และโมชันกราฟิก 3D พร้อมกับพัฒนาทักษะด้านเทคโนโลยีคอมพิวเตอร์และการพัฒนาส่วนหน้า (Front-End) เพื่อส่งมอบประสบการณ์ผู้ใช้ที่ดีที่สุดในทุกมิติ
+                </p>
+              </div>
+
+              <!-- Animated Stats Grid -->
+              <div class="about-stats-grid">
+                <div class="stat-item">
+                  <div class="stat-number">
+                    <span class="stat-number-val" data-target="20">0</span>
+                    <span class="stat-plus">+</span>
+                  </div>
+                  <div class="stat-label">โปรเจกต์ที่สร้างสรรค์</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">
+                    <span class="stat-number-val" data-target="3">0</span>
+                    <span class="stat-plus">+</span>
+                  </div>
+                  <div class="stat-label">ปีแห่งการศึกษา &amp; ฝึกฝน</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">
+                    <span class="stat-number-val" data-target="100">0</span>
+                    <span class="stat-plus">%</span>
+                  </div>
+                  <div class="stat-label">ความมุ่งมั่นทุ่มเท</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Education, Interests, Career Goals -->
+          <div class="col-lg-6 reveal-init delay-200">
+            <div class="about-info-stack">
+              
+              <!-- Education Card -->
+              <div class="about-detail-card glass-panel">
+                <div class="about-card-header">
+                  <div class="about-card-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                  <div>
+                    <h3 class="about-card-title">ประวัติการศึกษา (Education)</h3>
+                  </div>
+                </div>
+                <div class="about-card-body">
+                  <div class="edu-meta">
+                    <i class="fa-regular fa-calendar-check"></i> 2023 - ปัจจุบัน (กำลังศึกษาอยู่)
+                  </div>
+                  <div class="edu-school">หลักสูตรวิทยาศาสตรบัณฑิต / ศิลปกรรมศาสตร์</div>
+                  <div class="edu-major">สาขาวิชาสื่อนฤมิต (Creative Media Technology &amp; Digital Arts)</div>
+                  <p class="mt-2">
+                    ศึกษาโครงสร้างการผลิตสื่อดิจิทัลเชิงบูรณาการ: คอมพิวเตอร์กราฟิก 3 มิติ, การออกแบบสื่อปฏิสัมพันธ์ (Interactive Design), การผลิตภาพยนตร์ดิจิทัล, และการพัฒนาเทคโนโลยีเว็บไซต์
+                  </p>
+                </div>
+              </div>
+
+              <!-- Interests Card -->
+              <div class="about-detail-card glass-panel">
+                <div class="about-card-header">
+                  <div class="about-card-icon card-icon-yellow">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                  </div>
+                  <div>
+                    <h3 class="about-card-title">ความสนใจพิเศษ (Interests)</h3>
+                  </div>
+                </div>
+                <div class="about-card-body">
+                  <p>มีความสนใจและติดตามเทคโนโลยีใหม่ ๆ อย่างต่อเนื่องในด้าน:</p>
+                  <div class="interests-tags">
+                    <span class="interest-tag"><i class="fa-solid fa-wand-magic-sparkles text-primary-yellow"></i> 3D Motion Graphic</span>
+                    <span class="interest-tag"><i class="fa-solid fa-mobile-screen-button text-primary-blue"></i> UI/UX System Design</span>
+                    <span class="interest-tag"><i class="fa-solid fa-code text-accent-cyan"></i> Creative Front-End</span>
+                    <span class="interest-tag"><i class="fa-solid fa-camera text-primary-yellow"></i> Cinematic Filmmaking</span>
+                    <span class="interest-tag"><i class="fa-solid fa-robot text-primary-blue"></i> Generative AI Art</span>
+                    <span class="interest-tag"><i class="fa-solid fa-vr-cardboard text-primary-yellow"></i> Spatial Computing</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Goals Card -->
+              <div class="about-detail-card glass-panel">
+                <div class="about-card-header">
+                  <div class="about-card-icon">
+                    <i class="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div>
+                    <h3 class="about-card-title">เป้าหมายในการทำงาน (Career Goals)</h3>
+                  </div>
+                </div>
+                <div class="about-card-body">
+                  <p>
+                    มุ่งสู่การเป็น <strong>Creative Technologist / Senior UI-UX Designer</strong> ชั้นนำที่สามารถเชื่อมโยงจินตนาการทางศิลปะเข้ากับเทคโนโลยีสมัยใหม่ เพื่อสร้างสรรค์สื่อดิจิทัลและผลิตภัณฑ์ที่ส่งมอบคุณค่า สร้างแรงบันดาลใจ และยกระดับประสบการณ์ให้แก่ผู้คนทั่วโลก
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Extra Feature: Creative Process Timeline -->
+        <div class="mt-5 pt-3">
+          <div class="glass-panel p-4 p-lg-5 reveal-init">
+            <div class="section-header mb-4 text-center">
+              <span class="section-subtitle">MY WORKFLOW</span>
+              <h2 class="h3 fw-bold">กระบวนการทำงานเชิงสร้างสรรค์ (Creative Process)</h2>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center">
+              <div class="col">
+                <div class="p-3">
+                  <div class="brand-icon mx-auto mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
+                    <span>01</span>
+                  </div>
+                  <h4 class="h5 fw-bold mb-2">Research &amp; Concept</h4>
+                  <p class="text-muted small">ศึกษาค้นคว้า ตีโจทย์ วาง Moodboard และกำหนดทิศทางความคิดสร้างสรรค์</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-3">
+                  <div class="brand-icon mx-auto mb-3" style="width: 50px; height: 50px; font-size: 1.3rem; background: var(--gradient-yellow);">
+                    <span>02</span>
+                  </div>
+                  <h4 class="h5 fw-bold mb-2">Design &amp; Prototype</h4>
+                  <p class="text-muted small">ออกแบบ Wireframe, Storyboard, 3D Assets และต้นแบบจำลองที่มีปฏิสัมพันธ์</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-3">
+                  <div class="brand-icon mx-auto mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
+                    <span>03</span>
+                  </div>
+                  <h4 class="h5 fw-bold mb-2">Production &amp; Tech</h4>
+                  <p class="text-muted small">ลงมือผลิตงานจริง ตัดต่อ Render แอนิเมชัน และเขียนโค้ดฟรอนต์เอนด์คุณภาพสูง</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-3">
+                  <div class="brand-icon mx-auto mb-3" style="width: 50px; height: 50px; font-size: 1.3rem; background: var(--gradient-yellow);">
+                    <span>04</span>
+                  </div>
+                  <h4 class="h5 fw-bold mb-2">Refine &amp; Deliver</h4>
+                  <p class="text-muted small">ทดสอบความพร้อม ปรับแต่งสีและประสิทธิภาพ สู่การส่งมอบผลงานที่สมบูรณ์แบบ</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <a href="skills.html" class="btn-modern btn-modern-primary btn-shimmer me-2">
+                <span>ดูทักษะและความสามารถ</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="portfolio.html" class="btn-modern btn-modern-outline">
+                <span>ดูผลงานที่ผ่านมา</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="d-flex align-items-center gap-3">
+          <div class="brand-icon" style="width:30px; height:30px; font-size: 0.9rem;">
+            <i class="fa-solid fa-shapes"></i>
+          </div>
+          <div>
+            <p class="footer-copyright">
+              &copy; 2026 <strong>My Portfolio</strong> &mdash; Designed by <span class="footer-designer">Worawith Sangkatip</span>
+            </p>
+          </div>
+        </div>
+        <div>
+          <a href="#" class="footer-back-to-top" id="footerScrollTop">
+            <span>กลับสู่ด้านบน (Back to Top)</span>
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" type="button" aria-label="เลื่อนกลับด้านบนสุด" title="Scroll to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript Libraries & Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navbar.js"></script>
+
+</body>
+</html>

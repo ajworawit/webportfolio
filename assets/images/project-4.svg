@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p4-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1727" />
+      <stop offset="60%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#31102f" />
+    </linearGradient>
+    <linearGradient id="film-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="40%" stop-color="#f59e0b" />
+      <stop offset="80%" stop-color="#ec4899" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#p4-bg)" />
+
+  <!-- Cinematic 2.39:1 aspect ratio frame simulation -->
+  <rect x="50" y="50" width="500" height="230" rx="12" fill="#000000" stroke="#38bdf8" stroke-width="2" />
+  
+  <!-- Film Strip perforations on top and bottom -->
+  <g fill="#1e293b">
+    <rect x="65" y="56" width="16" height="10" rx="2" />
+    <rect x="95" y="56" width="16" height="10" rx="2" />
+    <rect x="125" y="56" width="16" height="10" rx="2" />
+    <rect x="155" y="56" width="16" height="10" rx="2" />
+    <rect x="185" y="56" width="16" height="10" rx="2" />
+    <rect x="215" y="56" width="16" height="10" rx="2" />
+    <rect x="245" y="56" width="16" height="10" rx="2" />
+    <rect x="275" y="56" width="16" height="10" rx="2" />
+    <rect x="305" y="56" width="16" height="10" rx="2" />
+    <rect x="335" y="56" width="16" height="10" rx="2" />
+    <rect x="365" y="56" width="16" height="10" rx="2" />
+    <rect x="395" y="56" width="16" height="10" rx="2" />
+    <rect x="425" y="56" width="16" height="10" rx="2" />
+    <rect x="455" y="56" width="16" height="10" rx="2" />
+    <rect x="485" y="56" width="16" height="10" rx="2" />
+    <rect x="515" y="56" width="16" height="10" rx="2" />
+  </g>
+
+  <!-- Video Player Preview Inside Frame -->
+  <rect x="65" y="75" width="470" height="155" fill="#090d16" />
+  
+  <!-- Cinematic Neon Skyline / City Lights Silhouette -->
+  <polygon points="65,230 110,140 145,230" fill="#0284c7" opacity="0.4" />
+  <polygon points="130,230 180,120 220,230" fill="#facc15" opacity="0.5" />
+  <polygon points="210,230 270,95 330,230" fill="#38bdf8" opacity="0.6" />
+  <polygon points="310,230 380,130 430,230" fill="#f59e0b" opacity="0.4" />
+  <polygon points="410,230 470,110 535,230" fill="#0284c7" opacity="0.3" />
+
+  <!-- Anamorphic Lens Flare Beam -->
+  <ellipse cx="270" cy="150" rx="240" ry="8" fill="url(#film-glow)" opacity="0.75" />
+  <circle cx="270" cy="150" r="28" fill="#fef08a" opacity="0.9" />
+
+  <!-- Video Play Button Overlay -->
+  <circle cx="300" cy="152" r="25" fill="rgba(15,23,42,0.8)" stroke="#facc15" stroke-width="2" />
+  <polygon points="295,142 312,152 295,162" fill="#facc15" />
+
+  <!-- Video Timeline / Audio Waveform Scrub Bar -->
+  <rect x="65" y="242" width="470" height="6" rx="3" fill="#334155" />
+  <rect x="65" y="242" width="280" height="6" rx="3" fill="#facc15" />
+  <circle cx="345" cy="245" r="7" fill="#facc15" />
+
+  <text x="75" y="268" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11">02:34 / 04:18</text>
+  <text x="525" y="268" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11" text-anchor="end">4K DCI • 24 FPS • LOG</text>
+
+  <!-- Tag Overlay -->
+  <rect x="30" y="325" width="125" height="32" rx="16" fill="rgba(15,23,42,0.85)" stroke="#facc15" stroke-width="1" />
+  <text x="92" y="346" fill="#facc15" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" text-anchor="middle">VIDEO EDITING</text>
+
+  <text x="30" y="380" fill="#f8fafc" font-family="'Kanit', sans-serif" font-weight="600" font-size="20">Echoes of Bangkok: Short Doc</text>
+</svg>

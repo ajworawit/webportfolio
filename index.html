@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="th" data-bs-theme="dark">
+<head>
+  <!-- ==========================================================================
+       HEAD: Meta Tags, Typography & External Stylesheets (CDN)
+       ========================================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>ทักษะและความสามารถ (Skills) | วรวิทย์ สังฆทิพย์</title>
+  <meta name="description" content="พอร์ตโฟลิโอส่วนตัวสำหรับนักศึกษาสาขาสื่อนฤมิต (Creative Media) รวบรวมผลงาน Motion Graphic, UI/UX, Web Design, Video Editing และ AI Tools">
+  <meta name="author" content="Panuwat Narumitsin">
+
+  <!-- Favicon Icon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/profile-placeholder.svg">
+
+  <!-- Google Fonts: Kanit (Headings & Thai) & Plus Jakarta Sans (Modern Latin body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.2 (Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Modular CSS Architecture -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/skills.css">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       0. PRELOADER ANIMATION
+       ========================================================================== -->
+  <div id="preloader" aria-label="กำลังโหลดหน้าเว็บไซต์...">
+    <div class="spinner-wrap">
+      <div class="spinner-ring"></div>
+      <div class="spinner-logo"><span class="text-primary-blue">C</span><span class="text-warning">M</span></div>
+    </div>
+    <div class="preloader-text">CREATIVE MEDIA PORTFOLIO</div>
+  </div>
+
+  <!-- ==========================================================================
+       1. NAVIGATION BAR (Sticky Navigation, Theme Toggle, Multi-Page Links)
+       ========================================================================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg custom-navbar" id="mainNavbar">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon">
+            <i class="fa-solid fa-shapes"></i>
+          </div>
+          <span class="brand-text">TUMSMILE<span class="brand-dot">.</span>PORTFOLIO</span>
+        </a>
+
+        <!-- Right Side: Theme Toggle & Mobile Hamburger -->
+        <div class="d-flex align-items-center gap-2 order-lg-last">
+          <!-- Dark / Light Mode Toggle Button -->
+          <button class="theme-toggle-btn" id="themeToggleBtn" type="button" title="สลับโหมดมืด / สว่าง" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon icon-moon"></i>
+            <i class="fa-solid fa-sun icon-sun"></i>
+          </button>
+
+          <!-- Mobile Navbar Toggler Button -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="เปิดเมนูนำทาง">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu Links (คลิกไปยังไฟล์ HTML แต่ละหน้า) -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html"><i class="fa-solid fa-house-chimney me-1 d-lg-none"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"><i class="fa-solid fa-user-astronaut me-1 d-lg-none"></i> About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="skills.html"><i class="fa-solid fa-wand-magic-sparkles me-1 d-lg-none"></i> Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html"><i class="fa-solid fa-cubes me-1 d-lg-none"></i> Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"><i class="fa-solid fa-paper-plane me-1 d-lg-none"></i> Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         2. HERO SECTION (Mesh Gradient, Glowing Avatar, Creative Intro, CTA)
+         ========================================================================== -->
+    <section class="hero-section" id="home">
+      <!-- Background Ambient Glow Blobs -->
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+
+      <div class="container">
+        <div class="row align-items-center min-vh-75 gy-5">
+          <!-- Hero Text Content -->
+          <div class="col-lg-7 text-center text-lg-start reveal-init">
+            <div class="hero-tagline">
+              <span class="glass-badge glass-badge-yellow">
+                <i class="fa-solid fa-sparkles"></i> Open for Creative Opportunities
+              </span>
+            </div>
+
+            <h1 class="hero-title">
+              สวัสดีครับ, ผม <span class="text-gradient">วรวิทย์ สังฆทิพย์</span>
+            </h1>
+
+            <div class="hero-subtitle">
+              <span class="hero-subtitle-dot"></span>
+              Teacher of Creative Media &amp; MSU.
+            </div>
+
+            <p class="hero-bio">
+              อาจารย์สาขาสื่อนฤมิต ผู้หลงใหลการผสมผสานศาสตร์แห่งความคิดสร้างสรรค์ เทคโนโลยีดิจิทัล และงานออกแบบประสบการณ์ผู้ใช้ (UI/UX, 3D Motion, Web Interaction) เพื่อถ่ายทอดเรื่องราวที่ทรงพลังและทันสมัย
+            </p>
+
+            <!-- CTA Action Buttons -->
+            <div class="hero-cta-group">
+              <a href="portfolio.html" class="btn-modern btn-modern-primary btn-shimmer">
+                <span>ดูผลงานทั้งหมด (Portfolio)</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="contact.html" class="btn-modern btn-modern-outline">
+                <i class="fa-regular fa-comment-dots"></i>
+                <span>ติดต่อพูดคุย (Contact)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Avatar & Graphic Elements -->
+          <div class="col-lg-5 d-flex justify-content-center reveal-init delay-200">
+            <div class="hero-avatar-wrapper">
+              <!-- Floating Creative Badges -->
+              <div class="floating-badge floating-badge-1">
+                <i class="fa-solid fa-palette"></i>
+                <span>UI/UX &amp; Web</span>
+              </div>
+
+              <!-- Center Glowing Avatar Ring -->
+              <div class="hero-avatar-ring">
+                <div class="hero-avatar-inner">
+                  <img src="assets/images/profile-placeholder.svg" alt="รูปโปรไฟล์นักศึกษาสาขาสื่อนฤมิต" class="hero-avatar-img" width="380" height="380" loading="eager">
+                </div>
+              </div>
+
+              <div class="floating-badge floating-badge-2">
+                <i class="fa-solid fa-film"></i>
+                <span>3D &amp; Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HIGHLIGHT OVERVIEW 1: ABOUT ME PREVIEW
+         ========================================================================== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="glass-panel p-4 p-lg-5 reveal-init">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="glass-badge"><i class="fa-solid fa-user-astronaut"></i> About Me</span>
+              </div>
+              <h2 class="h3 fw-bold mb-3">สร้างสรรค์ด้วยหัวใจ ขับเคลื่อนด้วยนวัตกรรมดิจิทัล</h2>
+              <p class="text-muted mb-0">
+                ศึกษาอยู่ที่สาขาสื่อนฤมิต มุ่งเน้นการออกแบบและสร้างสรรค์ภาพยนตร์ดิจิทัล 3D Motion, การพัฒนาเว็บไซต์ Interactive และประสบการณ์ UI/UX ที่ตอบโจทย์การใช้งานจริง
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="about.html" class="btn-modern btn-modern-outline w-100 w-lg-auto">
+                <span>อ่านประวัติและเป้าหมาย</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HIGHLIGHT OVERVIEW 2: SKILLS PREVIEW
+         ========================================================================== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="section-header reveal-init">
+          <span class="section-subtitle">SKILLS SHOWCASE</span>
+          <h2 class="section-title">ทักษะความเชี่ยวชาญ <span class="text-gradient-yellow">10 ด้าน</span></h2>
+          <p class="section-desc">ครอบคลุมทั้งงานผลิตสื่อนฤมิตสร้างสรรค์และการพัฒนาเทคโนโลยีฟรอนต์เอนด์</p>
+        </div>
+
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 mb-4">
+          <div class="col reveal-init delay-100">
+            <div class="skill-card text-center p-3">
+              <div class="skill-icon-box mx-auto mb-2"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <h3 class="h6 fw-bold mb-0">Motion Graphic</h3>
+            </div>
+          </div>
+          <div class="col reveal-init delay-150">
+            <div class="skill-card text-center p-3 blue-accent">
+              <div class="skill-icon-box mx-auto mb-2"><i class="fa-solid fa-layer-group"></i></div>
+              <h3 class="h6 fw-bold mb-0">UI/UX Design</h3>
+            </div>
+          </div>
+          <div class="col reveal-init delay-200">
+            <div class="skill-card text-center p-3">
+              <div class="skill-icon-box mx-auto mb-2"><i class="fa-solid fa-film"></i></div>
+              <h3 class="h6 fw-bold mb-0">Video Editing</h3>
+            </div>
+          </div>
+          <div class="col reveal-init delay-250">
+            <div class="skill-card text-center p-3 blue-accent">
+              <div class="skill-icon-box mx-auto mb-2"><i class="fa-solid fa-laptop-code"></i></div>
+              <h3 class="h6 fw-bold mb-0">Web Design</h3>
+            </div>
+          </div>
+          <div class="col reveal-init delay-300">
+            <div class="skill-card text-center p-3">
+              <div class="skill-icon-box mx-auto mb-2"><i class="fa-solid fa-robot"></i></div>
+              <h3 class="h6 fw-bold mb-0">AI Tools</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center reveal-init">
+          <a href="skills.html" class="btn-modern btn-modern-outline">
+            <span>ดูรายละเอียดทักษะทั้งหมด 10 ด้าน</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HIGHLIGHT OVERVIEW 3: PORTFOLIO PREVIEW (3 Selected Works)
+         ========================================================================== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="section-header reveal-init">
+          <span class="section-subtitle">PORTFOLIO HIGHLIGHTS</span>
+          <h2 class="section-title">ตัวอย่างผลงานเด่น <span class="text-gradient">(Featured Works)</span></h2>
+          <p class="section-desc">ผลงานสร้างสรรค์ล่าสุดจากหลักสูตรสื่อนฤมิตและการประกวดนวัตกรรม</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+          <!-- Work 1 -->
+          <div class="col reveal-init delay-100">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb-wrap">
+                <span class="portfolio-cat-badge">Motion Graphic</span>
+                <img src="assets/images/project-1.svg" alt="LUMINA 3D Motion Identity" class="portfolio-thumb" loading="lazy">
+              </div>
+              <div class="portfolio-body">
+                <h3 class="portfolio-title">LUMINA: 3D Motion Identity</h3>
+                <p class="portfolio-desc">อัตลักษณ์แบรนด์ 3D เรขาคณิตและอนุภาคแสงสำหรับงานนิทรรศการ</p>
+                <div class="portfolio-footer">
+                  <span class="text-muted small">Blender / C4D</span>
+                  <a href="portfolio.html" class="btn-view-work">
+                    <span>ดูรายละเอียด</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Work 2 -->
+          <div class="col reveal-init delay-200">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb-wrap">
+                <span class="portfolio-cat-badge">UI/UX Design</span>
+                <img src="assets/images/project-2.svg" alt="NEXUS Smart Campus Life App" class="portfolio-thumb" loading="lazy">
+              </div>
+              <div class="portfolio-body">
+                <h3 class="portfolio-title">NEXUS: Smart Campus App</h3>
+                <p class="portfolio-desc">แอปพลิเคชันไลฟ์สไตล์นักศึกษา UI สไตล์ Glassmorphism</p>
+                <div class="portfolio-footer">
+                  <span class="text-muted small">Figma System</span>
+                  <a href="portfolio.html" class="btn-view-work">
+                    <span>ดูรายละเอียด</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Work 3 -->
+          <div class="col reveal-init delay-300">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb-wrap">
+                <span class="portfolio-cat-badge">Web Design</span>
+                <img src="assets/images/project-3.svg" alt="Chroma Interactive Web Experience" class="portfolio-thumb" loading="lazy">
+              </div>
+              <div class="portfolio-body">
+                <h3 class="portfolio-title">Chroma: Web Experience</h3>
+                <p class="portfolio-desc">เว็บไซต์นิทรรศการศิลปะดิจิทัลที่โต้ตอบได้แบบเรียลไทม์</p>
+                <div class="portfolio-footer">
+                  <span class="text-muted small">HTML5 / Three.js</span>
+                  <a href="portfolio.html" class="btn-view-work">
+                    <span>ดูรายละเอียด</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center reveal-init">
+          <a href="portfolio.html" class="btn-modern btn-modern-primary btn-shimmer">
+            <span>เข้าชมแกลเลอรีผลงานทั้งหมด (6 ผลงาน)</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HIGHLIGHT OVERVIEW 4: CONTACT CTA BANNER
+         ========================================================================== -->
+    <section class="py-5 mb-5">
+      <div class="container">
+        <div class="glass-panel p-4 p-lg-5 text-center position-relative overflow-hidden reveal-init">
+          <div class="hero-blob hero-blob-3" style="top:-20%; left:30%; opacity:0.3;"></div>
+          <span class="section-subtitle">GET IN TOUCH</span>
+          <h2 class="h2 fw-bold mb-3">มีโปรเจกต์ที่น่าสนใจ หรือต้องการร่วมงานกัน?</h2>
+          <p class="text-muted max-w-600 mx-auto mb-4" style="max-width: 600px;">
+            ยินดีพูดคุยและแลกเปลี่ยนไอเดีย ทั้งงานฝึกงาน งานฟรีแลนซ์ และโปรเจกต์สร้างสรรค์สื่อนฤมิตทุกรูปแบบ
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="contact.html" class="btn-modern btn-modern-primary btn-shimmer">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>ไปยังหน้าติดต่อ (Contact Page)</span>
+            </a>
+            <a href="mailto:panuwat.creative@email.com" class="btn-modern btn-modern-outline">
+              <i class="fa-solid fa-envelope"></i>
+              <span>ส่งอีเมลโดยตรง</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       7. FOOTER SECTION
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Brand & Copyright -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="brand-icon" style="width:30px; height:30px; font-size: 0.9rem;">
+            <i class="fa-solid fa-shapes"></i>
+          </div>
+          <div>
+            <p class="footer-copyright">
+              &copy; 2026 <strong>My Portfolio</strong> &mdash; Designed by <span class="footer-designer">Worawith Sangkatip</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Back to Top Link -->
+        <div>
+          <a href="#home" class="footer-back-to-top" id="footerScrollTop">
+            <span>กลับสู่ด้านบน (Back to Top)</span>
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       8. SCROLL TO TOP FLOATING BUTTON
+       ========================================================================== -->
+  <button id="scrollTopBtn" type="button" aria-label="เลื่อนกลับด้านบนสุด" title="Scroll to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ==========================================================================
+       9. JAVASCRIPT LIBRARIES & SCRIPTS
+       ========================================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navbar.js"></script>
+
+</body>
+</html>
